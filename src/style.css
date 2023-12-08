@@ -1,0 +1,132 @@
+*{
+    box-sizing: border-box;
+}
+
+body{
+    margin: 0;
+}
+:root{
+    --color-light-purple: #966C80;
+    --color-black: black;
+    --color-white: white;
+    --color-light-sky: #72A5AE;
+    --color-light-orange: #ECA36C;
+    --font-family-header: 'Jomhuria', serif;
+}
+
+header{
+    background-color: var(--color-light-purple);
+    color: var(--color-white);
+    /* height: 130px; */
+    /* font-size: 3rem; */
+    /* text-align: center; */
+    margin-bottom: 20px;
+}
+
+h1{
+    margin: 0;
+    text-align: center;
+    font-family: var(--font-family-header);
+    font-size: 4rem;
+    padding: 30px;
+}
+
+.container-principal{
+    display: flex;
+    flex-wrap: wrap;
+    justify-content: center;
+    margin: 20px;
+    padding: 10px;
+    height: 550px;
+    border: black 2px solid;
+}
+.container-left{
+    display: flex;
+    flex-wrap: wrap;
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;
+    width: 45%;
+    padding: 10px;
+    border: brown 2px solid;
+}
+
+.title{
+    /* border: 1px black solid; */
+    text-align: center;
+    font-size: 1.5rem;
+    padding-bottom: 10px;
+}
+
+textarea[name="user-input"]{
+    background-color: var(--color-light-sky);
+    resize: none;
+    width: 540px;
+    height: 400px;
+    border-radius: 20px;
+    border: none;
+    color: var(--color-white);
+    padding: 30px;
+    font-size: 2rem;
+}
+
+.container-right{
+    width: 55%;
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    padding: 40px;
+    /* justify-content: space-around; */
+    border: red 2px solid;
+}
+
+ul{
+    display: grid;
+    grid-template-columns: auto auto;
+    margin: 20px;
+}  
+.box-option{
+    background-color: var(--color-light-orange);
+    border-radius: 20px;
+    width: 280px;
+    /* width: 200px; */
+    height: 70px;
+    padding: 10px;
+    margin: 10px;
+    text-align: center;
+    color: var(--color-white);
+    font-size: 1.5rem;
+    display: flex;
+    flex-direction: column;
+}
+.container-btn{
+    display: flex;
+    justify-content: center;
+    border: red 2px solid;
+}
+
+#reset-button{
+    background-color: var(--color-light-purple);
+    border: none;
+    border-radius: 20px;
+    color: var(--color-white);
+    width: 240px;
+    height: 60px;
+    cursor: pointer;
+    font-size: 1.5rem;
+}
+footer{
+     margin: 0;
+}
+footer p {
+    border: solid black 1px;
+    font-size: 1rem;
+    text-align: center;
+    color: var(--color-light-purple);
+    margin:0;
+    font-weight: bold;
+}
+
+
+
+
