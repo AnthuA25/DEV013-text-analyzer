@@ -10,6 +10,7 @@
       href="https://fonts.googleapis.com/css2?family=Jomhuria&family=Judson:ital@0;1&family=Merriweather&family=Raleway:ital,wght@1,100&display=swap"
       rel="stylesheet"
     />
+    <link rel="icon" href="/analisis-de-texto.png">
   </head>
 
   <body>
@@ -17,39 +18,21 @@
       <h1>Analizador de texto</h1>
     </header>
 
-    <main class="container-principal">
-
-      <section class="container-left">
-        <label for="text" class="title">Ingresar texto</label>
-        <textarea name="user-input" cols="30" rows="10"></textarea>
+    <main>
+      <!-- form -->
+      <section id="container-left">
+        <label for="text" >Ingresar texto</label>
+        <textarea autocomplete="off" name="user-input" cols="30" rows="10"></textarea>
       </section>
 
-      <section class="container-right">
+      <section id="container-right">
         <ul>
-          <div class="box-option">
-            Palabras
-            <li class="show-option" data-testid="word-count">0</li>
-          </div>
-          <div class="box-option">
-            Caracteres
-            <li class="show-option" data-testid="character-count">0</li>
-          </div>
-          <div class="box-option">
-            Caracteres Sin Espacios
-            <li class="show-option" data-testid="character-no-spaces-count">0</li>
-          </div>
-          <div class="box-option">
-            Números
-            <li class="show-option" data-testid="number-count">0</li>
-          </div>
-          <div class="box-option">
-            Suma de Números
-            <li class="show-option" data-testid="number-sum">0</li>
-          </div>
-          <div class="box-option">
-            Promedio longitud
-            <li class="show-option" data-testid="word-length-average">0</li>
-          </div>
+            <li class="box-option" data-testid="word-count">Palabras <br>0</li>
+            <li class="box-option" data-testid="character-count">Caracteres <br>0</li>
+            <li class="box-option" data-testid="character-no-spaces-count">Caracteres Sin Espacios <br>0</li>
+            <li class="box-option" data-testid="number-count">Números <br>0</li>
+            <li class="box-option" data-testid="number-sum">Suma de Números <br>0</li>
+            <li class="box-option" data-testid="word-length-average">Promedio longitud <br>0</li>
         </ul>
         <div class="container-btn">
 

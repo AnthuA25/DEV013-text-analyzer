@@ -22,21 +22,22 @@ btnReset.addEventListener("click", resetValue);
 
 function showText() {
   const text = textArea.value;
-  showWords.textContent = analyzer.getWordCount(text);
-  showCharacters.textContent = analyzer.getCharacterCount(text);
-  showNumbers.textContent = analyzer.getNumberCount(text);
-  showNumberSum.textContent = analyzer.getNumberSum(text);
-  showAvgL.textContent = analyzer.getAverageWordLength(text);
-  showCharactersWithoutS.textContent =
-    analyzer.getCharacterCountExcludingSpaces(text);
+  showCharacters.innerHTML = `Caracteres<br> ${analyzer.getCharacterCount(text)}`;
+  showWords.innerHTML = `Palabras<br> ${analyzer.getWordCount(text)}`;
+  showCharactersWithoutS.innerHTML = `Caracteres Sin Espacios <br>${analyzer.getCharacterCountExcludingSpaces(text)}`;
+  showAvgL.innerHTML = `Promedio de longitud <br>${analyzer.getAverageWordLength(text)}`;
+  showNumberSum.innerHTML = `Suma de Números <br>${analyzer.getNumberSum(text)}`;
+  showNumbers.innerHTML = `Números <br>${analyzer.getNumberCount(text)}`;
 }
 
 function resetValue() {
   textArea.value = "";
-  showWords.textContent = 0;
-  showCharacters.textContent = 0;
-  showNumbers.textContent = 0;
-  showNumberSum.textContent = 0;
-  showAvgL.textContent = 0;
-  showCharactersWithoutS.textContent = 0;
+  showWords.innerHTML = `Palabras <br>${0}`;
+  showCharacters.innerHTML = `Caracteres<br> ${0}`;
+  showCharactersWithoutS.innerHTML = `Caracteres Sin Espacios <br>${0}`;
+  showNumbers.innerHTML = `Números <br>${0}`;
+  showNumberSum.innerHTML = `Suma de Números <br>${0}`;
+  showAvgL.innerHTML = `Promedio de longitud <br>${0}`;
 }
+
+
