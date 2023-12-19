@@ -5,7 +5,7 @@ const analyzer = {
     const words = text.split(/\s+/);
     for (let i = 0; i < words.length; i++) {
       if (words[i] !== "") {
-        indice++;
+        indice++
       }
     }
     return indice;
@@ -23,7 +23,7 @@ const analyzer = {
   getAverageWordLength: (text) => {
     //TODO: esta función debe retornar la longitud media de palabras que se encuentran en el parámetro `text` de tipo `string`.
     const words = text.split(/\s+/).length;
-    const charactersWithoutSpace = text.replace(/\W/g, "").length;
+    const charactersWithoutSpace = text.replace(/\s/g, "").length;
     const avgWordLength = charactersWithoutSpace / words;
     return Math.round(avgWordLength * 100) / 100;
   },
@@ -46,18 +46,22 @@ const analyzer = {
     //TODO: esta función debe retornar la suma total de los numeros encontrados en el parámetro `text`
     // busque que numeros, pero que no tenga ni un caracter antes ni despues
     // const arrayNumber = text.match(/\d+(\.\d+)?/g);
-    const arrayNumber = text.match(/\d+(\.\d+)?/g);
-    if (!arrayNumber) {
+    const arrayNumber = text.split(/\s+/);
+    const findNumber = arrayNumber.filter((number) => {
+      return /^\d+([.\d.]+)?$/g.test(number);
+    });
+    console.log(findNumber)
+    if (!findNumber) {
       return 0;
     } else {
-      const convertNumber = arrayNumber
+      const convertNumber = findNumber
         .map((numero) => {
           const numbers = parseFloat(numero);
           return numbers;
         })
         .reduce((acc, n) => {
           return acc + n;
-        });
+        },0);
       return convertNumber;
     }
   },
