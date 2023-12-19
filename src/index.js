@@ -4,7 +4,6 @@ import analyzer from "./analyzer.js";
 
 const textArea = document.querySelector("textarea");
 const showWords = document.querySelector("li[data-testid='word-count']");
-console.log(showWords)
 const showCharacters = document.querySelector(
   "li[data-testid='character-count']"
 );
